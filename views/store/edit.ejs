@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><%=store.name%></title>
+</head>
+<body>
+	<form actions="stores/<%=store.id%>?_method=PUT" moehtd="POST">
+		Name: <input type="text" name="name" value="<%= store.name %>"></br>
+		Type: <input type="text" name="type" value="<%= store.type %>"></br>
+		<input type="submit" name="submit">
+	</form>
+
+
+</body>
+</html>

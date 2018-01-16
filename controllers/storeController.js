@@ -31,5 +31,21 @@ router.get('/:id', (req, res) =>{
 });
 
 
+router.get('/:id/edit', (req, res) => {
+	Store.findById(req.params.id, (err, foundStore)=> {
+		// console.log(foundStore)
+			res.render('store/show.ejs', {store: foundStore})
+	})
+});
+
+router.put('/:id', (req,res) => {
+	Store.findByIdAndUpdate(req.params.id, req.body, (err, storeUpdate) =>{
+		res.redirect('/stores')
+
+	})
+
+})
+
+
 
 module.exports = router;
