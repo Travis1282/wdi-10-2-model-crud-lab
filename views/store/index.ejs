@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Store of Stores</title>
+</head>
+<body>
+	<h1>Store of Stores</h1>
+	<ul>
+		<% for (var i = 0; i < stores.length; i++) { -%>
+			<li>
+				<a href="stores/<%=stores[i].id%>"><%=stores[i].name%></a>
+			</li>
+		<% } -%>
+	</ul>
+
+
+</body>
+</html>
